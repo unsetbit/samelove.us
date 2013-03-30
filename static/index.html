@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+  <meta charset="utf-8">
+  <title>Same Love</title>
+  <meta name="viewport" content="user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta property="fb:admins" content="1582950001" />
+  <meta property="og:image" content="http://samelove.us/fb-image.jpg"/>
+  <meta property="og:title" content="Same Love"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://samelove.us/"/>
+  <meta property="og:site_name" content="Same Love"/>
+  <meta property="og:description" content="A live collage based on the music video by Macklemore &amp; Ryan Lewis."/>
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="stylesheet" href="samelove.css" type="text/css">
+</head>
+<body>
+	<div class="same-love">
+		<div id="FinaleOverlay" class="finale overlay hidden">
+			<div class="credits-container">
+				<div class="title">
+					<img 
+						style='margin-right:7px; position:relative; top:15px;' 
+						src="http://farm9.staticflickr.com/8248/8595956022_65bb07c944_s.jpg"
+					/>
+
+					Same Love</div>
+				<div class="subtitle">
+					A live collage based on the music video by Macklemore &amp; Ryan Lewis
+				</div>
+				
+				<div class="left-section">
+					<div class="section-title">What You Can Do Now</div>
+					<div>
+						<div class="action">
+							<a href="http://www.hrc.org/">
+								Support the Human Rights Campaign
+							</a>
+						</div>
+						<div class="action">
+							<a href="http://www.hrc.org/resources/entry/congressional-scorecard-for-the-111th-congress">
+								See if your state representative is representing you
+							</a>
+						</div>
+						<div class="action">
+							<div class="fb-like-box" data-href="http://facebook.com/gayrights.change.org" data-width="400" data-height="700" data-show-faces="true" data-stream="false" data-header="false"></div>								
+						</div>
+					</div>
+				</div>
+
+				<div class="right-section">
+					<div class="section-title">About this site </div>
+					<div>
+						<div class="action">
+							This site pulls various live feeds throughout the internet
+							to create a dynamic interactive collage set to the music video 
+							<a href="http://www.youtube.com/watch?v=hlVBg7_08n0">"Same Love" by Macklemore &amp; Ryan Lewis</a>.
+						</div>
+
+						<div class="action">
+							This is a personal project of <a href="http://oztu.org"></a>. 
+							The source code for this application is available at <a href="https://github.com/ozanturgut/samelove.us">Github</a>.
+						</div>
+						<div>
+							<div class="fb-like" data-href="http://samelove.us/" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+						</div>
+					</div>
+					<div class="section-title" style="margin-top:30px;">Attribution</div>
+					<div class="attribution">
+						<div>
+							This is an unordered list of what you saw. Since the experience
+							is dynamic, this list will change with each visit.
+						</div>
+						<div class="action">
+							<label>Music Video</label>
+							<div><a href="http://macklemore.com/">Macklemore and Ryan Lewis</a></div>
+						</div>
+						<div class="action">
+							<label>Cover Photo</label>
+							<div><a href="http://www.flickr.com/people/charlesfred/">CharlesFred</a></div>
+						</div>
+						<div class="action">
+							<label>Flickr Images</label>
+							<div id="flickrCredits"></div>
+						</div>
+						<div class="action">
+							<label>Reddit Images</label>
+							<div id="redditCredits"></div>
+						</div>
+						<div class="action">
+							<label>Google News Articles</label>
+							<div id="googleNewsArticleCredits"></div>
+						</div>
+						<div class="action">
+							<label>Twitter Posts</label>
+							<div id="twitterPostCredits"></div>
+						</div>
+						<div class="action">
+							<label>Facebook Pages</label>
+							<div id="facebookPageCredits"></div>
+						</div>
+						<div class="action">
+							<label>Websites</label>
+							<div id="websiteCredits"></div>
+						</div>
+						<div class="action">
+							<label>Youtube Videos</label>
+							<div id="youtubeCredits"></div>
+						</div>
+						<div class="action">
+							<label>New York Times Articles</label>
+							<div id="nyTimesArticleCredits"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="MainCollage" class="collage"></div>
+		
+		<div id="IntroOverlay" class="intro overlay ">
+			<div class="incompatible hidden overlay-content">
+				<div class="title">Unable to Play</div>
+				<p>
+					Your browser doesn't have the features required by this application. 
+					Try visiting this page with the latest version of <a href="http://www.google.com/chrome">Google Chrome</a>.
+				</p>
+			</div>
+
+			<div class="load hidden overlay-content" style="text-align:center;">
+				<div class="title">Loading&hellip;</div>
+				<p class="not-chrome hidden">
+					Your browser doesn't support some of the features used by this application. Use <a href="http://www.google.com/chrome">Google Chrome</a> for a better experience.
+				</p>
+				<p class="progress-report hidden">
+					This might take a while. It'll be worth it.
+				</p>
+				<p class="hidden slow-connection">
+					There is lots of stuff to load &mdash; grab some tea, open another tab, and browse the 'net for a while.
+				</p>
+			</div>
+			<div class="ready hidden overlay-content" style="text-align:center;">
+				<div class="title">Click to Start</div>
+				<p class="not-chrome hidden">
+					Your browser doesn't support some of the features used by this application. Use <a href="http://www.google.com/chrome">Google Chrome</a> for a better experience.
+				</p>
+				<p>
+					Turn up your volume. Move with your mouse.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+
+	<script>
+		if(!Element.prototype.addEventListener){
+			document.addEventListener = Element.prototype.addEventListener = function addEvent(on, fn){
+				return this.attachEvent('on' + on, fn);
+			}
+
+		}
+
+		if(!Element.prototype.removeEventListener){
+			document.removeEventListener = Element.prototype.removeEventListener = function addEvent(on, fn){
+				return this.detachEvent('on' + on, fn);
+			}
+		}
+	</script>
+	<script src="es5shimsham.js"></script>
+	<script src="//www.youtube.com/iframe_api"></script>
+	<script src="//platform.twitter.com/widgets.js"></script>
+
+	<script src="samelove.js"></script>
+
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-4017245-10']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</body>
+</html>

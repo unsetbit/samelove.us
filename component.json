@@ -1,0 +1,16 @@
+{
+	"name": "samelove.us", 
+	"version": "0.1.0",
+	"main": "./dist/samelove.js",
+	"dependencies": {
+		"eventEmitter": "~4.0.5",
+		"q": "0.8.12",
+		"modernizr": "2.6.2"
+	},
+	"ignore": [
+		"./src/**",
+		"node_modules",
+		"grunt.js",
+		"package.json"
+	]
+}
